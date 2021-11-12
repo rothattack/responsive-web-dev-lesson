@@ -1,0 +1,93 @@
+@import url(./helpers.css);
+
+:root {
+  --nav-height: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: whitesmoke;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  background-color: rgb(33, 33, 48);
+  padding-bottom: calc(38px + 1rem + env(safe-area-inset-bottom));
+}
+
+.full-height {
+  min-height: calc(100vh - 38px - 1rem);
+}
+
+h1 { color: whitesmoke; }
+h1.title {
+  padding-top: 1rem;
+  text-align: center;
+}
+h2 { color: rgb(145, 145, 145); }
+
+nav {
+  position: fixed;
+  height: var(--nav-height);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 0 1rem;
+}
+
+nav > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: var(--nav-height);
+  height: var(--nav-height);
+  width: var(--nav-height);
+  position: relative;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  letter-spacing: .12rem;
+  text-decoration: none;
+}
+
+nav > a:after {
+  position: absolute;
+  height: var(--nav-height);
+  width: var(--nav-height);
+  left: 0;
+  top: 0;
+  content: '';
+  background-color: #fff5;
+  transition: 300ms;
+  z-index: -1;
+  transform: scale3d(.01, .01, 1);
+  border-radius: 100%;
+}
+
+nav > a:hover:after {
+  transform: scale3d(.9, .9, 1);
+}
+
+.grid {
+  padding: 1rem;
+}
+
+.grid > .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  background-color: rgb(89, 89, 120);
+  font-size: 3rem;
+  box-shadow: 5px 5px 0 #0004;
+  border-radius: 10px;
+}

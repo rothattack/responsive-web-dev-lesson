@@ -1,0 +1,33 @@
+.text-center {
+  text-align: center;
+}
+
+button {
+  background-color: rgb(44, 179, 60);
+  color: black;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  min-width: 10rem;
+  padding: 0 1.5rem;
+  border-radius: .25rem;
+  cursor: pointer;
+  border: none;
+}
+
+label {
+  display: block;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+input {
+  display: block;
+  color: black;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  border: none;
+  padding: 0 1rem;
+  border-radius: .25rem;
+  width: 100%;
+}

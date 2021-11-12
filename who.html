@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grids WTH</title>
+
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/flex.css">
+  <style>
+    img {
+      object-fit: cover;
+      width: 100%;
+      max-width: 350px;
+      max-height: 350px;
+      border-radius: 100%;
+      box-shadow:
+        -10px -10px 20px rgb(136, 68, 68),
+        10px -10px 20px rgba(71, 136, 71),
+        -10px 10px 20px rgb(70, 97, 138),
+        10px 10px 20px rgb(138, 130, 68);
+      margin: 2rem;
+    }
+    h1 { color: whitesmoke; }
+    h2 { color: rgb(145, 145, 145); }
+    .tech {
+      width: 100%;
+      max-width: 400px;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      margin: 4rem;
+      justify-items: center;
+      align-items: center;
+    }
+    .tech > img {
+      height: 100px;
+      width: 100px;
+      margin: 0;
+      padding: .5rem;
+      box-shadow: 15px 5px 30px black, inset 5px 2px 15px grey;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex vertical center full-height">
+    <img src="/wew.jpg">
+    <h1>Robert Roth</h1>
+    <h2>Software Guy & Techno Lead</h2>
+    <h2 style="color:rgb(226, 75, 75)">World Wide <span style="color:rgb(37, 113, 226)">Technology</span></h2>
+    
+    <div class="tech">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Svelte.png" alt="Svelte">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1024px-Angular_full_color_logo.svg.png" alt="Angular">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React">
+      <img src="https://images.tutorialedge.net/images/node.png" alt="NodeJS">
+      <img style="object-fit: contain;" src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" alt="Docket">
+      <img style="object-fit: contain;" src="https://download.logo.wine/logo/Microsoft_Azure/Microsoft_Azure-Logo.wine.png" alt="">
+  </div>
+  </div>
+
+
+  <nav>
+    <a href="/">👈</a>
+    <a href="/">🏠</a>
+    <a href="/expectations.html">👉</a>
+  </nav>
+</body>
+</html>
