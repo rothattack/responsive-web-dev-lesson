@@ -6,12 +6,14 @@ button {
   background-color: rgb(44, 179, 60);
   color: black;
   font-size: 1.5rem;
+  height: 3rem;
   line-height: 3rem;
   min-width: 10rem;
   padding: 0 1.5rem;
   border-radius: .25rem;
   cursor: pointer;
   border: none;
+  margin: 1rem;
 }
 
 label {
@@ -19,6 +21,7 @@ label {
   font-size: 1.5rem;
   width: 100%;
   max-width: 30rem;
+  padding: 1rem;
 }
 
 input {
@@ -30,4 +33,12 @@ input {
   padding: 0 1rem;
   border-radius: .25rem;
   width: 100%;
+}
+
+.wider {
+  grid-column: span 2;
+}
+
+.taller {
+  grid-row: span 2;
 }

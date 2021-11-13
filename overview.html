@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grids WTH</title>
+
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./lessons/flex.css">
+  <style>
+    ul {
+      list-style: none;
+    }
+    h1 {
+      font-size: 10vw;
+    }
+    h2 {
+      color: whitesmoke;
+      margin: 1rem 0;
+    }
+    ul > li {
+      font-size: 7vw;
+    }
+    @media screen and (min-width: 360px) {
+      h1 {
+        font-size: 7vw;
+      }
+      ul > li {
+        font-size: 5vw;
+      }
+    }
+
+    .gridvs > div, .flexbox > div {
+      height: 10rem;
+      width: 10rem;
+      background: grey;
+      border: solid 1px white;
+    }
+
+    .gridvs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .flexbox {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .flex.vertical {
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex vertical center full-height">
+    <h1>Grid vs Flexbox</h1>
+    <div class="flex horizontal">
+      <div class="flex vertical">
+        <h2>Grid:</h2>
+        <div class="gridvs">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+        </div>
+      </div>
+      <div class="flex vertical">
+        <h2>Flexbox</h2>
+        <div class="flexbox">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+        <div class="flexbox">
+          <div>4</div>
+          <div>5</div>
+          <div>6</div>
+        </div>
+        <div class="flexbox">
+          <div>7</div>
+          <div>8</div>
+          <div>9</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <nav>
+    <a href="./centering.html">👈</a>
+    <a href="../index.html">🏠</a>
+    <a href="./lessons/grid.html">👉</a>
+  </nav>
+</body>
+</html>
