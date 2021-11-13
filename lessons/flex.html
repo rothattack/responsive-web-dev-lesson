@@ -16,14 +16,36 @@
       font-size: 1.5rem;
       padding: 1rem;
     }
+
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      flex-shrink: 1;
+    }
+
+    .horizontal {
+      flex-direction: row;
+    }
+
+    .vertical {
+      flex-direction: column;
+    }
   </style>
 </head>
 <body>
-  <h1>😀 Social Media 😀</h1>
-  <p>Please let us invade your privacy and sell your information to our clients.</p>
-  <label>Username: <input type="text"></label>
-  <label>Password: <input type="text"></label>
-  <button>Submit</button>
+  <div class="flex horizontal">
+    <div class="flex vertical">
+      <h1>😀 Social Media 😀</h1>
+      <p>Please let us invade your privacy and sell your information to our clients.</p>
+    </div>
+    <div class="flex vertical">
+      <label>Username: <input type="text"></label>
+      <label>Password: <input type="password"></label>
+      <button>Submit</button>
+    </div>
+  </div>
 
   <nav>
     <a href="./grid2.html">👈</a>
