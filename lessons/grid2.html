@@ -8,28 +8,75 @@
 
   <link rel="stylesheet" href="../index.css">
   <link rel="stylesheet" href="./basic.css">
+  <style>
+    .grid-area {
+      min-height: calc(100vh - 38px - 1rem);
+      width: 100%;
+      padding: 0;
+      display: grid;
+      grid-template-areas:  "header header header"
+                            "sidebar content1 content1"
+                            "footer footer footer";
+      grid-template-rows: 10rem 1fr 60px;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    @media screen and (max-width: 600px) {
+      .grid-area {
+        grid-template-areas:  "content1"
+                              "sidebar"
+                              "header"
+                              "footer";
+        grid-template-rows: 2fr 1fr 5rem 0;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .grid-area > div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header {
+      background: rgb(143, 74, 74);
+      grid-area: header;
+    }
+
+    .sidebar {
+      background: rgb(74, 143, 74);
+      grid-area: sidebar;
+    }
+
+    .content1 {
+      background: rgb(74, 76, 143);
+      grid-area: content1;
+    }
+
+    .content2 {
+      background: rgb(74, 76, 143);
+      grid-area: content2;
+    }
+
+    .footer {
+      background: rgb(143, 138, 74);
+      grid-area: footer;
+      overflow: hidden;
+    }
+  </style>
 </head>
 <body>
-  <div class="grid">
-    <div class="card">1</div>
-    <div class="card">2</div>
-    <div class="card">3</div>
-    <div class="card">4</div>
-    <div class="card">5</div>
-    <div class="card">6</div>
-    <div class="card">7</div>
-    <div class="card">8</div>
-    <div class="card">9</div>
-    <div class="card">10</div>
-    <div class="card">11</div>
-    <div class="card">12</div>
+  <div class="grid-area">
+    <div class="header">header</div>
+    <div class="sidebar">sidebar</div>
+    <div class="content1">content1</div>
+    <div class="footer">footer</div>
   </div>
 
-
   <nav>
-    <a href="./grid.html">👈</a>
+    <a href="./now-what.html">👈</a>
     <a href="../index.html">🏠</a>
-    <a href="./now-what.html">👉</a>
+    <a href="./flex.html">👉</a>
   </nav>
 </body>
 </html>
